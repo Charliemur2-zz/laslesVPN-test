@@ -61,3 +61,19 @@ $(document).ready(function () {
   });
 });
 
+/* get vurrent year */
+window.addEventListener('load', (
+  function () {
+      document.querySelector('.js-current-year').appendChild(
+          document.createTextNode(
+              new Date().getFullYear()
+          )
+      );
+  }
+));
+/* scroll to top buttom */
+const scrollUpBtn = document.querySelector('.js-scrollup__btn');
+function goToHeader() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
