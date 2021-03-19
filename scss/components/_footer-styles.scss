@@ -1,0 +1,182 @@
+.footer {
+  width: 100%;
+  background-color: $orange-normal;
+  color: $secundary-text;
+
+  .container {
+    width: 100%;
+    display: grid;
+  }
+  &__hight {
+    width: 100%;
+    border-bottom: #9A7DFF solid 1px;
+    padding: 10px 0;
+    &-paragraph {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.11rem;
+      line-height: 52px;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      @include responsive-page(md) {
+        justify-content: center;
+      }
+      @include responsive-page(mdtop) {
+        justify-content: center;
+      }
+    }
+    &-item:nth-child(3) {
+      @include responsive-page(md) {
+        grid-column: 1 / span 2;
+        justify-content: center;
+      }
+      @include responsive-page(mdtop) {
+        grid-column: unset;
+        justify-content: center;
+      }
+    }
+    &-item:nth-child(2) {
+      @include responsive-page(md) {
+        justify-content: start;
+      }
+    }
+    &-icon {
+      padding-right: 13px;
+    }
+  }
+  &__hight-wrapper {
+    max-width: 1248px;
+    margin: 0 auto;
+  }
+  &__hight-container {
+    width: 100%;
+    display: grid;
+    grid-gap: 13px;
+    padding: 13px 0;
+    justify-content: center;
+    align-items: center;
+    @include responsive-page(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include responsive-page(mdtop) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 0;
+    }
+
+  }
+  &__content-wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  &__content {
+    display: grid;
+    padding: 26px 26px 26px 35px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    @include responsive-page(md) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 0.2fr;
+      padding: 13px 13px 13px 50px;
+    }
+    @include responsive-page(mdtop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.2fr;
+      padding: 13px 13px 40px 26px;
+    }
+  }
+  .info {
+    &__subtitle {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 0.77rem;
+      line-height: 52px;
+      text-transform: uppercase;
+    }
+    &__list-link {
+      color: $secundary-text;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.66rem;
+      line-height: 22px;
+    }
+  }
+  .social {
+    grid-column: 1 / span 2;
+    padding-top: 20px;
+
+    &__subtitle {
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 0.77rem;
+      line-height: 52px;
+      text-transform: uppercase;
+      @include responsive-page(mdtop) {
+        text-align: start;
+      }
+    }
+    &__icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      @include responsive-page(md) {
+        padding: 0 150px;
+      }
+      @include responsive-page(mdtop) {
+        padding: 0;
+        grid-gap: 35px;
+      }
+
+      &-item {
+        display: grid;
+        justify-content: center;
+        @include responsive-page(mdtop) {
+          justify-content: start;
+        }
+      }
+    }
+    @include responsive-page(md) {
+      grid-column: 1 / span 4;
+    }
+    @include responsive-page(mdtop) {
+      grid-column: 5 / span 1;
+      padding-top: 0;
+    }
+  }
+  .top-scroll {
+    display: none;
+    @include responsive-page(md) {
+      display: grid;
+      grid-row: 1 / span 1;
+      grid-column: 5 / span 1;
+      padding-top: 20px;
+    }
+    @include responsive-page(mdtop) {
+      display: grid;
+      justify-content: end;
+      padding-top: 20px;
+    }
+  }
+  .mini-footer {
+    display: flex;
+    text-align: center;
+    background-color: #E5E5E5;
+    justify-content: center;
+    .copyright {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: $primary-color;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.55rem;
+      line-height: 22px;
+      text-align: center;
+      padding: 30px 0;
+      &__links-item {
+        text-decoration: underline;
+        color: $primary-color;
+      }
+    }
+  }
+}
