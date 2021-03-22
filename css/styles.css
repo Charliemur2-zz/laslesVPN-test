@@ -328,32 +328,15 @@ Useful to conevert px to rem
   justify-content: center;
   text-align: center;
   margin-bottom: 30%;
+  position: absolute;
+  transform: scale(0);
+  order: 4;
 }
-@media screen and (max-width: 767px) {
-  .main-header .navbar .log {
-    position: absolute;
-    transform: scale(0);
-    order: 4;
-  }
-  .main-header .navbar .log--opened {
-    position: relative;
-    transform: scale(1);
-    width: 100%;
-    transition: 1s;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .main-header .navbar .log {
-    position: absolute;
-    transform: scale(0);
-    order: 4;
-  }
-  .main-header .navbar .log--opened {
-    position: relative;
-    transform: scale(1);
-    width: 100%;
-    transition: 1s;
-  }
+.main-header .navbar .log--opened {
+  position: relative;
+  transform: scale(1);
+  width: 100%;
+  transition: 1s;
 }
 @media screen and (min-width: 1024px) {
   .main-header .navbar .log {
@@ -634,10 +617,13 @@ Useful to conevert px to rem
   align-items: flex-start;
   margin-bottom: 2.2222222222em;
   min-width: 15.5555555556em;
-  max-width: 23.3333333333em;
+  max-width: 33.3333333333em;
   justify-content: flex-start;
 }
 @media screen and (min-width: 1024px) {
+  .info-page--vpnfeatures {
+    max-width: 23.3333333333em;
+  }
   .info-page--vpnfeatures:nth-child(2) {
     margin-top: 55px;
   }
@@ -670,13 +656,16 @@ Useful to conevert px to rem
   bottom: 0;
   right: 0px;
   margin-right: 5%;
-  transform: scale(0.7);
+}
+@media screen and (max-width: 767px) {
+  .info-page__images-payment {
+    transform: scale(0.7);
+  }
 }
 @media screen and (min-width: 1024px) {
   .info-page__images-payment {
     left: -60px;
     margin: 0 0 -30px 0;
-    transform: scale(1);
   }
 }
 .info-page__images-square, .info-page__images-mailchip, .info-page__images-jetpack, .info-page__images-googleAds {
@@ -714,13 +703,13 @@ Useful to conevert px to rem
   }
 }
 .info-page__images-googleAds {
-  margin-left: 230px;
+  left: 230px;
   margin-bottom: 0;
 }
 @media screen and (min-width: 1024px) {
   .info-page__images-googleAds {
     bottom: -30px;
-    left: 140px;
+    left: 150px;
   }
 }
 .info-page__images-sharepc {
