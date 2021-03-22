@@ -1,15 +1,15 @@
 /* HEADER SECTION */
+.fixed {
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+    top:0em;
+    z-index: 1;
+}
 
 .main-header {
     width: 100%;
     /* Class to fix/sticky the navbar on top when a user scrolls */
-    .fixed {
-        position: sticky;
-        background-color: #ffffff;
-        box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
-        top:0em;
-        z-index: 1;
-    }
     
     .navbar {
         position: relative;
@@ -97,7 +97,7 @@
             justify-content: center;
             width: 16.666%;
             @include responsive-page(mdtop) { 
-                justify-content: center;
+                justify-content: flex-start;
             }
             
             &__text { 
@@ -115,7 +115,8 @@
             align-items: center;
             justify-content:space-between ;
             text-align: center;
-            
+            height: 100%;
+
             @include responsive-page(smd) { @include nav-position-responsive(100%) ; }
             @include responsive-page(md) { @include nav-position-responsive(100%); }
             
@@ -124,6 +125,7 @@
             @include responsive-page(mdtop) {
                 flex-flow: row;
                 justify-content: center;
+                margin-top: 0;
                 width: 58.331%;
              }
         }
@@ -133,7 +135,7 @@
             flex-flow: column;
             align-items: center;
             max-width: em(240px);
-            margin-bottom: em(78px);
+            margin-bottom: 25%;
             width: 100%;
             
             @include responsive-page(mdtop) { 
@@ -147,7 +149,7 @@
                 margin-bottom: em(48px);
                 width: min-content;
                 &:last-child {
-                    margin-bottom: em(76px);
+                    margin-bottom: 20%;
                     @include responsive-page(mdtop) { margin-bottom: 0; }
                 }
                 @include responsive-page(mdtop) { margin-bottom: 0; }
@@ -165,6 +167,7 @@
                             opacity: 1;
                             bottom: -.5rem;
                         }
+                        a { color: $orange-normal; }
                     }
             
                     &::after {
@@ -196,9 +199,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-bottom: em(60px);
+            margin-bottom: 30%;
             
-            @include responsive-page(smd) { @include log-opened }
+            @include responsive-page(smd) {@include log-opened }
             @include responsive-page(md) { @include log-opened }
             
             @include responsive-page(mdtop) {
@@ -216,9 +219,11 @@
             &__get-started {
                 background-color: $orange-normal;
                 border-radius: 5px;
-                color: #ffffff;
+                color: $secundary-text;
                 margin-left: em(26px);
                 padding: 13px 14px;
+                &:hover { background-color: $orange-light;}
+                &:focus { background-color: $orange-dark;}
             }
         }
         // Search icon and box

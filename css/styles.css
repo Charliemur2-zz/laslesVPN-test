@@ -224,6 +224,7 @@ Useful to conevert px to rem
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  height: 100%;
 }
 @media screen and (max-width: 767px) {
   .main-header .navbar .navigate {
@@ -328,15 +329,32 @@ Useful to conevert px to rem
   justify-content: center;
   text-align: center;
   margin-bottom: 30%;
-  position: absolute;
-  transform: scale(0);
-  order: 4;
 }
-.main-header .navbar .log--opened {
-  position: relative;
-  transform: scale(1);
-  width: 100%;
-  transition: 1s;
+@media screen and (max-width: 767px) {
+  .main-header .navbar .log {
+    position: absolute;
+    transform: scale(0);
+    order: 4;
+  }
+  .main-header .navbar .log--opened {
+    position: relative;
+    transform: scale(1);
+    width: 100%;
+    transition: 1s;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main-header .navbar .log {
+    position: absolute;
+    transform: scale(0);
+    order: 4;
+  }
+  .main-header .navbar .log--opened {
+    position: relative;
+    transform: scale(1);
+    width: 100%;
+    transition: 1s;
+  }
 }
 @media screen and (min-width: 1024px) {
   .main-header .navbar .log {
