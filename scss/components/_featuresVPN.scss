@@ -1,0 +1,134 @@
+/*
+    Styles for VPN features section
+*/
+.vpnfeatures {
+    margin: 0 auto;
+    width: 92.31%;
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        min-width: em(340px);
+        margin-bottom: em(50px);
+    }
+}
+
+.info-page {
+    &--vpnfeatures {
+        align-items: flex-start;
+        margin-bottom: em(40px);
+        min-width: em(280px);
+        max-width: em(420px);
+        justify-content: flex-start;
+        
+        @include responsive-page(mdtop) {
+            &:nth-child(2) { margin-top: 55px; }
+            &:nth-child(3) { margin-top: 120px; }
+        }
+    }
+
+    &__images {
+        &--vpnfeatures {
+            margin-bottom: 50px;
+            & > * {
+                filter: drop-shadow(0px 18px 52.8537px rgba(215, 228, 249, 0.5));
+            }
+        }
+
+        &-applepay, &-payment, &-square, &-mailchip,
+        &-facebook, &-jetpack, &-googleAds, &-sharepc,
+        &-social, &-social2 {
+            position:absolute;
+            width:fit-content;
+        }
+        &-needtostart, &-customize, &-community { width: 100%; }
+        
+        // Need to start card
+        &-applepay {
+            top:16px;    
+            @include responsive-page (mdtop) { margin-left:-40px; }
+        }
+        &-payment {
+            bottom:0;
+            right: 0px;
+            margin-right: 5%;
+            transform: scale(.7);
+            @include responsive-page (mdtop) {
+                left:-60px;
+                margin: 0 0 -30px 0;
+                transform: scale(1);
+            }
+        }
+
+        // Customize card
+        &-square, &-mailchip, &-jetpack, &-googleAds { margin-left:10px; }
+        &-square {
+            @include responsive-page(mdtop) { margin: -40px 0  0 40px; }
+        }
+        &-facebook {
+            margin-left:120px;
+            @include responsive-page(mdtop) { margin: 110px 0  0 40px; }
+        }
+        &-mailchip {
+            margin-top:72px;
+            @include responsive-page(mdtop) { margin: 20px 0  0 40px; right: 30px; }
+        }
+        &-jetpack {
+            margin-top:144px;
+            @include responsive-page(mdtop) { margin: 140px 0  0 40px; right: 90px; }
+        }
+        &-googleAds {
+            margin-left:230px;
+            margin-bottom:0;
+            @include responsive-page(mdtop) { bottom: -30px; left: 140px; }
+        }
+        
+        // Comunity card
+        &-sharepc {
+            bottom:0;
+            left:0;
+            margin-left: 20px;
+            @include responsive-page (mdtop) { top:-70px; margin-left: 50px; }
+        }
+        &-social {
+            bottom:0;
+            right:0;
+            margin-right: 20px;
+            @include responsive-page (mdtop) { top:-110px; margin-right: 40px;}
+        }
+        &-social2 {
+            left:0;
+            margin-left: 20px;
+            @include responsive-page (mdtop) { margin:0; bottom:40px; left: 320px;}
+        }
+    }
+    &__title {
+        @include responsive-page(mdtop) {
+            &--vpnfeatures {
+                align-self: center;
+                font-size: 40px;
+                width: 33%;
+                margin-bottom: 60px;
+            }
+        }
+    }
+    &__subtitle {
+        &--vpnfeatures {
+            font-size: 24px;
+            @include responsive-page(mdtop) { font-size: 36px; }
+        }
+    }
+    &__text {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 25px;
+    }
+
+    &__link {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+}
