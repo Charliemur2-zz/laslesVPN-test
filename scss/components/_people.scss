@@ -1,0 +1,134 @@
+.people {
+  &__main {
+    width: 100%;
+    background-image: url('./../../image/dots-green.svg');
+    background-position: 97% 42%;
+    background-repeat: no-repeat;
+    background-size: 31%;
+    @include responsive-page(md) {
+      background-image: 
+        url('./../../image/dots-green.svg'),
+        url('./../../image/ellipse-36.svg'), 
+        url('./../../image/dot-pink.svg');
+      background-position: 2% 57%, 2% 65%, 115% 107%;
+      background-size: 18%, 6%, 20%;
+    }
+    @include responsive-page(mdtop) {
+      background-image: 
+        url('./../../image/dots-green.svg'),
+        url('./../../image/ellipse-36.svg'), 
+        url('./../../image/dot-pink.svg'),
+        url('./../../image/med-circle-back.svg'),
+        url('./../../image/ellipse-32.svg'),
+        url('./../../image/ellipse-34.svg');
+      background-position: 0 54%, 1% 60%, 102% 108%, center 177%, 17% 17%, 98% 2%;
+      background-size: unset;
+    }
+    .container{
+      display: grid;
+    }
+    &-picture{
+      width: 100%;
+      max-width: 1145px;
+      margin: 0 auto;
+      display: none;
+      &-img {
+        width: 100%;
+      }
+      @include responsive-page(mdtop) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  &__banner {
+    width: 100%;
+    background-color: $background-orange;
+    background-image: url('./../../image/ellipse-35.svg');
+    background-position: 99% 112%;
+    background-repeat: no-repeat;
+    background-size: 16%;
+    @include responsive-page(md) {
+      background-position: 99% 112%;
+      background-size: unset;
+    }
+    @include responsive-page(mdtop) {
+      background-position: 99% 112%;
+      background-size: unset;
+    }
+    &-wrapper {
+      max-width: 854px;
+      margin: 0 auto;
+    }
+    &-paragraph {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 52px;
+      text-align: center;
+      color: $secundary-text;
+      @include responsive-page(smd) {
+        font-size: 1.5rem;
+        line-height: 42px;
+        padding: 20px 20px;
+      }
+      @include responsive-page(md) {
+        padding: 40px 51px;
+      }
+      @include responsive-page(mdtop) {
+        padding: 67px 0;
+      }
+    }
+  }
+}
+
+.text-block__wrapper {
+  max-width: 675px;
+  margin: 0 auto;
+}
+.text-block {
+  display: grid;
+  padding: 30px 0;
+  grid-gap: 20px;
+  @include responsive-page(md) {
+    padding: 30px 0 40px 0;
+  }
+  @include responsive-page(mdtop) {
+    padding: 130px 0 40px 0;
+    margin-bottom: 50px;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 70px;
+    text-align: center;
+    color: $primary-color;
+    @include responsive-page(smd) {
+      font-size: 2rem;
+      line-height: 42px;
+      padding-bottom: 90px;
+    }
+    @include responsive-page(md) {
+      padding: 40px 0;
+    }
+    @include responsive-page(mdtop) {
+      padding-bottom: 30px;
+    }
+  }
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 30px;
+    text-align: center;
+    color: $third-text;
+    padding: 0 20px;
+    @include responsive-page(md) {
+      margin-top: 60px;
+    }
+    @include responsive-page(mdtop) {
+      padding: 0;
+    }
+  }
+}
