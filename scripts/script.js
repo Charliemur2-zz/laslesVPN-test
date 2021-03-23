@@ -20,7 +20,7 @@ $(document).ready(function () {
 
   //Calculate the height of <header> tag
   //Use outerHeight() instead of height() if have padding
-  let aboveHeight = $('header').outerHeight();
+  let aboveHeight = $('header').height();
   
   // Fix the navbar/header when user scrolls the page
   $(window).scroll(() => {
