@@ -945,4 +945,140 @@ Useful to conevert px to rem
   }
 }
 
+.hero {
+  background: linear-gradient(180deg, #e5efff 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%), url("../image/hero-images/hero-back.svg"), url("../image/hero-images/leave.svg");
+  background-position: 101% 5%, 0 0;
+  background-repeat: no-repeat;
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.hero__content {
+  width: 100%;
+  display: grid;
+}
+@media screen and (min-width: 1024px) {
+  .hero__content {
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    background-size: auto;
+    background-position: 69% 10%, 1% 43%;
+  }
+}
+.hero__text {
+  width: 100%;
+  display: grid;
+}
+@media screen and (min-width: 1024px) {
+  .hero__text {
+    grid-column: 1/span 8;
+  }
+}
+.hero__text-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 70px;
+  color: #272D4E;
+  padding: 100px 20px 20px 20px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__text-title {
+    padding: 100px 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__text-title {
+    padding: 270px 0 20px 0;
+    text-align: left;
+    font-weight: 500;
+    font-size: 4.72rem;
+    line-height: 95px;
+  }
+}
+.hero__text-paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 25px;
+  color: #75818E;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__text-paragraph {
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__text-paragraph {
+    text-align: left;
+    padding: 0 20px 0 0;
+  }
+}
+.hero__link {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.hero__link-button {
+  background: #FF890D;
+  border-radius: 60px;
+  padding: 25px 0;
+  width: 267px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+}
+.hero__link-anchor {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #299EF3;
+  text-align: center;
+}
+.hero__img {
+  display: none;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .hero__img {
+    display: grid;
+    grid-column: 9/span 4;
+  }
+}
+.hero__img-girls {
+  width: auto;
+  position: absolute;
+  bottom: 60px;
+  right: 150px;
+}
+.hero__img-product {
+  width: auto;
+  position: absolute;
+}
+.hero__img-sale {
+  width: auto;
+  position: absolute;
+}
+.hero__img-cart {
+  width: auto;
+  position: absolute;
+  top: 15rem;
+  right: auto;
+}
+.hero__img-pay {
+  width: auto;
+  position: absolute;
+}
+
 /*# sourceMappingURL=styles.css.map */
