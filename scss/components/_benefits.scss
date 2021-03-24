@@ -49,12 +49,10 @@
     &__dots-grid {
         position: absolute;
         z-index:-1;
-        &--deco5 {
-            top:35%;
-            @include responsive-page(smd) { opacity: .7; }
-        }
+        @include responsive-page(smd) { opacity: .7; }
+        &--deco5 { top:35%; }
         &--deco6 {
-            top:50%;
+            top: 53%;
             transform: rotate(90deg);
             right:136px;
             @include responsive-page(smd) { display: none; }
