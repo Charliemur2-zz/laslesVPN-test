@@ -793,7 +793,11 @@ Useful to conevert px to rem
 /*
     Benefits section styles
 */
-.color-patch {
+.vpnbenefits {
+  position: relative;
+  width: 100%;
+}
+.vpnbenefits__color-patch {
   position: absolute;
   color: black;
   width: 100%;
@@ -801,7 +805,7 @@ Useful to conevert px to rem
   background-color: #FF890D;
   z-index: -1;
 }
-.color-patch::before {
+.vpnbenefits__color-patch::before {
   content: "";
   position: absolute;
   background: #ffffff;
@@ -810,7 +814,7 @@ Useful to conevert px to rem
   height: 100px;
   top: -40px;
 }
-.color-patch::after {
+.vpnbenefits__color-patch::after {
   content: "";
   position: absolute;
   background: #ffffff;
@@ -818,11 +822,6 @@ Useful to conevert px to rem
   width: 100%;
   height: 100px;
   bottom: -40px;
-}
-
-.vpnbenefits {
-  position: relative;
-  width: 100%;
 }
 .vpnbenefits__circle {
   position: absolute;
@@ -877,28 +876,27 @@ Useful to conevert px to rem
     display: none;
   }
 }
-
-.benefits-box {
+.vpnbenefits__box {
   width: 90.31%;
   margin: 0 auto;
 }
-.benefits-box .info-page--box {
+.vpnbenefits__box .info-page--box {
   flex-flow: row wrap;
   margin-bottom: 22px;
 }
 @media screen and (min-width: 1024px) {
-  .benefits-box .info-page--box:nth-child(1), .benefits-box .info-page--box:nth-child(2) {
+  .vpnbenefits__box .info-page--box:nth-child(1), .vpnbenefits__box .info-page--box:nth-child(2) {
     justify-content: flex-start;
   }
 }
-.benefits-box .info-page--box:nth-child(2) {
+.vpnbenefits__box .info-page--box:nth-child(2) {
   flex-direction: row-reverse;
 }
-.benefits-box .info-page--benefits {
+.vpnbenefits__box .info-page--benefits {
   max-width: 490px;
   margin-bottom: 20px;
 }
-.benefits-box .info-page__images--benefits {
+.vpnbenefits__box .info-page__images--benefits {
   align-self: center;
   max-width: 23.8888888889rem;
   margin-bottom: 1.3888888889rem;
@@ -908,32 +906,105 @@ Useful to conevert px to rem
   box-shadow: -25px 20px 44px rgba(84, 48, 209, 0.4);
 }
 @media screen and (min-width: 1024px) {
-  .benefits-box .info-page__images--benefits {
+  .vpnbenefits__box .info-page__images--benefits {
     margin-right: 6%;
     margin-left: 3.75%;
   }
 }
-.benefits-box .info-page__subtitle--benefits {
+.vpnbenefits__box .info-page__subtitle--benefits {
   color: #ffffff;
 }
 @media screen and (min-width: 1024px) {
-  .benefits-box .info-page__subtitle--benefits {
+  .vpnbenefits__box .info-page__subtitle--benefits {
     font-size: 36px;
     line-height: 42px;
   }
 }
-.benefits-box .info-page__text--benefits {
+.vpnbenefits__box .info-page__text--benefits {
   line-height: 30px;
   color: #ffffff;
 }
-.benefits-box .info-page__button--benefits {
+.vpnbenefits__box .info-page__button--benefits {
   background-color: #70C217;
 }
-.benefits-box .info-page__button--benefits:hover {
+.vpnbenefits__box .info-page__button--benefits:hover {
   background-color: #96D94E;
 }
-.benefits-box .info-page__button--benefits:focus {
+.vpnbenefits__box .info-page__button--benefits:focus {
   background-color: #558E17;
+}
+
+/*
+    Agencies Testimonial Section
+        * Includes the slider component
+*/
+.primary-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+.primary-slider__box {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+.primary-slider__box-message {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+.primary-slider__control_prev, .primary-slider__control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.primary-slider__control_prev:hover, .primary-slider__control_next:hover {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.primary-slider__control_prev {
+  border-radius: 0 2px 2px 0;
+}
+.primary-slider__control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+.dots-grid {
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  .dots-grid {
+    transform: scale(0.7);
+  }
 }
 
 .people__main {

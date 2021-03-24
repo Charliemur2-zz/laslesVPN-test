@@ -59,6 +59,56 @@ $(document).ready(function () {
   searchJS.click(function () {
     searchBox.toggleClass('search-box--show');
   });
+
+  /*
+    Slider behavior
+    Contains:
+      * Arrows, left and right
+      * Message box
+  */
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('.primary-slider__box-message').length;
+	var slideWidth = $('.primary-slider__box-message').width();
+	var slideHeight = $('.primary-slider__box-message').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('.primary-slider').css({ width: slideWidth, height: slideHeight });
+	
+	$('.primary-slider__box').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('.primary-slider__box-message:last-child').prependTo('.primary-slider__box');
+
+    function moveLeft() {
+        $('.primary-slider__box').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('.primary-slider__box-message:last-child').prependTo('.primary-slider__box');
+            $('.primary-slider__box').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('.primary-slider__box').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('.primary-slider__box-message:first-child').appendTo('.primary-slider__box');
+            $('.primary-slider__box').css('left', '');
+        });
+    };
+
+    $('.primary-slider__control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('.primary-slider__control_next').click(function () {
+        moveRight();
+    });
+
 });
 
 /* get vurrent year */
