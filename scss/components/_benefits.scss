@@ -34,6 +34,7 @@
     width: 100%;
     &__circle {
         position: absolute;
+        z-index: -1;
         &--deco1 { top:13%; left:-2%; }
         &--deco2 {
             top:18%; left:0%;
@@ -43,6 +44,20 @@
             @include responsive-page(smd) { display: none; }
         }
         &--deco4 { top:48%; right:2%; }
+    }
+    &__dots-grid {
+        position: absolute;
+        z-index:-1;
+        &--deco5 {
+            top:35%;
+            @include responsive-page(smd) { opacity: .7; }
+        }
+        &--deco6 {
+            top:50%;
+            transform: rotate(90deg);
+            right:136px;
+            @include responsive-page(smd) { display: none; }
+        }
     }
 }
 
@@ -54,10 +69,10 @@
         &--box {
             flex-flow: row wrap;
             margin-bottom: 22px;
-            &:nth-child(1) {
+            &:nth-child(1), &:nth-child(2) {
                 @include responsive-page(mdtop) { justify-content: flex-start;}
             }
-            &:nth-child(2) { flex-flow: row-reverse wrap; justify-content: flex-start;}
+            &:nth-child(2) { flex-direction: row-reverse; }
         }
         &--benefits {
             max-width: 490px;

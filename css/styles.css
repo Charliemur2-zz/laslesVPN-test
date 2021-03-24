@@ -89,19 +89,14 @@ Useful to conevert px to rem
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 10.556rem;
-  min-width: 3.667rem;
+  max-width: 14.8333333333rem;
   width: 100%;
-  height: 3.444rem;
-  max-height: 10.889rem;
-  min-height: 1.556rem;
+  height: 4rem;
   background-color: #FF890D;
-  border-radius: 0.444rem;
-  color: #ffffff;
+  border-radius: 3.3333333333rem;
 }
 .info-page__button a {
-  font-weight: bold;
-  font-size: 1rem;
+  color: #ffffff;
 }
 .info-page__button:hover {
   background-color: #FFA342;
@@ -116,7 +111,7 @@ Useful to conevert px to rem
   background-color: #ffffff;
   box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
   top: 0em;
-  z-index: 1;
+  z-index: 10;
 }
 
 .main-header {
@@ -741,6 +736,11 @@ Useful to conevert px to rem
     margin-left: 50px;
   }
 }
+@media screen and (max-width: 767px) {
+  .info-page__images-social, .info-page__images-social2 {
+    display: none;
+  }
+}
 .info-page__images-social {
   bottom: 0;
   right: 0;
@@ -760,7 +760,7 @@ Useful to conevert px to rem
   .info-page__images-social2 {
     margin: 0;
     bottom: 40px;
-    left: 320px;
+    left: 318px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -826,6 +826,7 @@ Useful to conevert px to rem
 }
 .vpnbenefits__circle {
   position: absolute;
+  z-index: -1;
 }
 .vpnbenefits__circle--deco1 {
   top: 13%;
@@ -854,6 +855,28 @@ Useful to conevert px to rem
   top: 48%;
   right: 2%;
 }
+.vpnbenefits__dots-grid {
+  position: absolute;
+  z-index: -1;
+}
+.vpnbenefits__dots-grid--deco5 {
+  top: 35%;
+}
+@media screen and (max-width: 767px) {
+  .vpnbenefits__dots-grid--deco5 {
+    opacity: 0.7;
+  }
+}
+.vpnbenefits__dots-grid--deco6 {
+  top: 50%;
+  transform: rotate(90deg);
+  right: 136px;
+}
+@media screen and (max-width: 767px) {
+  .vpnbenefits__dots-grid--deco6 {
+    display: none;
+  }
+}
 
 .benefits-box {
   width: 90.31%;
@@ -864,13 +887,12 @@ Useful to conevert px to rem
   margin-bottom: 22px;
 }
 @media screen and (min-width: 1024px) {
-  .benefits-box .info-page--box:nth-child(1) {
+  .benefits-box .info-page--box:nth-child(1), .benefits-box .info-page--box:nth-child(2) {
     justify-content: flex-start;
   }
 }
 .benefits-box .info-page--box:nth-child(2) {
-  flex-flow: row-reverse wrap;
-  justify-content: flex-start;
+  flex-direction: row-reverse;
 }
 .benefits-box .info-page--benefits {
   max-width: 490px;
