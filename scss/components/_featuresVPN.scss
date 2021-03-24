@@ -91,6 +91,7 @@
             margin-left: 20px;
             @include responsive-page (mdtop) { top:-70px; margin-left: 50px; }
         }
+        &-social, &-social2 { @include responsive-page(smd) {display: none;} }
         &-social {
             bottom:0;
             right:0;
@@ -100,7 +101,7 @@
         &-social2 {
             left:0;
             margin-left: 20px;
-            @include responsive-page (mdtop) { margin:0; bottom:40px; left: 320px;}
+            @include responsive-page (mdtop) { margin:0; bottom:40px; left: 318px;}
         }
     }
     &__title {
