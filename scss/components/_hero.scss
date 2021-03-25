@@ -1,0 +1,172 @@
+.hero {
+  overflow: hidden;
+  position: relative;
+  &__content {
+    width: 100%;
+    display: grid;
+    @include responsive-page(mdtop) {
+      min-width: 1440px;
+      grid-template-columns: repeat(12, 1fr);
+      padding: 0 75px
+    }
+  }
+  &__back {
+    position: absolute;
+    opacity: 0.2;
+    bottom: 107px;
+    left: 38%;
+  }
+	background: linear-gradient(180deg, #e5efff 0%, rgba(229, 239, 255, 0.262661) 83.7%, rgba(229, 239, 255, 0) 100%);
+	border: 1px solid #000000;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @include responsive-page(md) {
+    background-size: auto;
+    background-position: 69% 10%, 1% 43%;
+  }
+	&__text {
+		width: 100%;
+    display: grid;
+    @include responsive-page(mdtop) {
+      grid-column: 1 / span 8;
+    }
+		&-title {
+			font-style: normal;
+			font-weight: 800;
+			font-size: 3rem;
+			line-height: 70px;
+			color: $primary-color;
+			padding: 100px 20px 20px 20px;
+			text-align: center;
+      @include responsive-page(md) {
+        padding: 100px 50px;
+      }
+      @include responsive-page(mdtop) {
+        padding: 270px 0 20px 0;
+        text-align: left;
+        font-weight: 500;
+        font-size: 4.72rem;
+        line-height: 95px;
+      }
+		}
+		&-paragraph {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1rem;
+			line-height: 25px;
+			color: $primary-text;
+			padding: 20px;
+			text-align: center;
+      @include responsive-page(md) {
+        padding: 50px;
+      }
+      @include responsive-page(mdtop) {
+        text-align: left;
+        padding: 0 25% 40px 0;
+      }
+		}
+    &-paragraph--single {
+      @include responsive-page(mdtop) {
+        padding: 22px 0 0 8px;
+      }
+    }
+	}
+	&__link {
+		display: grid;
+		justify-content: center;
+    padding-bottom: 40px;
+    @include responsive-page(mdtop) {
+      grid-template-columns: repeat(8, 1fr);
+      padding-bottom: 267px;
+    }
+    &-button {
+      background: $orange-normal;
+      border-radius: 60px;
+      padding: 25px 0;
+      width: 267px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: $secundary-text;
+    }
+    &-button:hover {
+      background: $orange-light;
+    }
+    &-anchor {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      color: #299EF3;
+      text-align: center;
+      @include responsive-page(mdtop) {
+        grid-column: 3 / span 2;
+        padding-top: 22px;
+        text-align: start;
+        margin-left: -44px;
+      }
+    }
+	}
+  &__img {
+    display: none;
+    width: 100%;
+    position: relative;
+    @include responsive-page(mdtop) {
+      display: grid;
+      grid-column: 9 / span 4;
+    }
+    &-girls {
+      width: auto;
+      position: absolute;
+      top: 205px;
+      right: 90px;
+    }
+    &-product {
+      width: auto;
+      position: absolute;
+      bottom: 160px;
+      right: -599px;
+      z-index: -1;
+    }
+    &-sale {
+      width: auto;
+      position: absolute;
+      right: -78px;
+      top: 33%;
+    }
+    &-cart {
+      width: auto;
+      position: absolute;
+      bottom: 67px;
+      right: 67%;
+    }
+    &-pay {
+      width: auto;
+      position: absolute;
+      bottom: 30px;
+      right: -196px;
+    }
+    &-purpple-dots{
+      width: auto;
+      position: absolute;
+      bottom: -125px;
+      right: -442px;
+      z-index: -2;
+    }
+    &-vertical-dots {
+      width: auto;
+      position: absolute;
+      top: 145px;
+      right: -175px;
+      z-index: -2;
+    }
+    &-horizontal-dots {
+      width: auto;
+      position: absolute;
+      top: 335px;
+      right: -132px;
+      z-index: -2;
+    }
+  }
+}
