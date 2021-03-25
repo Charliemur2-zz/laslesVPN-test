@@ -10,7 +10,8 @@ let searchShow ;
 let search;
 
 
-$(document).ready(function () {
+$(function () {
+
   dynamicMenu =  $('.js-navigate');
   dynamicLogIn = $('.js-log');
   hoverLinks = document.querySelectorAll('.navigate-list__item--hover')
@@ -23,7 +24,7 @@ $(document).ready(function () {
   let aboveHeight = $('header').height();
   
   // Fix the navbar/header when user scrolls the page
-  $(window).scroll(() => {
+  $(window).on('scroll', () => {
       //if scrolled down more than the header’s height
       if ($(window).scrollTop() > aboveHeight) {
         // if yes, add “fixed” class to the <nav>
@@ -37,7 +38,7 @@ $(document).ready(function () {
     });
 
   // Toggle class from Small and Medium device menu
-  $('.js-menu-button').click(function () {
+  $('.js-menu-button').on('click', function () {
       dynamicMenu.toggleClass('navigate--opened');
       dynamicLogIn.toggleClass('log--opened');
 
@@ -56,9 +57,9 @@ $(document).ready(function () {
   });
 
   // Show search box
-  searchJS.click(function () {
-    searchBox.toggleClass('search-box--show');
-  });
+  searchJS.on('click', () => {
+      searchBox.toggleClass('search-box--show');
+    });
 
   /*
     Slider behavior
@@ -66,12 +67,23 @@ $(document).ready(function () {
       * Arrows, left and right
       * Message box
   */
-  $('#checkbox').change(function(){
+  $('#checkbox').on('change', function(){
     setInterval(function () {
         moveRight();
     }, 3000);
   });
   
+  // Carousel 
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{ items:1 },
+        767:{ items:1 },
+        1024:{ items:1 }
+    }
+  })
 
 });
 
