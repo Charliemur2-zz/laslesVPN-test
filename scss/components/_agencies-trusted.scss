@@ -3,64 +3,113 @@
         * Includes the slider component
 */
 
-// Slider component
-.primary-slider {
-    position: relative;
-    overflow: hidden;
-    margin: 20px auto 0 auto;
-    border-radius: 4px;
-    
-    &__box { // ul tag
-      position: relative;
-      margin: 0;
-      padding: 0;
-      height: 200px;
-      list-style: none;
-      
-      &-message { // ul + li tags
-        position: relative;
-        display: block;
-        float: left;
-        margin: 0;
-        padding: 0;
-        width: 500px;
-        height: 300px;
-        background: #ccc;
-        text-align: center;
-        line-height: 300px;
+.info-page {
+  &--agencies { margin-bottom: to-rem(143px);}
+  &__subtitle {
+    &--agencies {
+      align-self: center;
+      width: 100%;
+      max-width: to-rem(640px);
+      text-align: center;
+      @include responsive-page(mdtop) {
+        font: {
+          size: 55px;
+          weight: 400;
+        }
       }
     }
+  }
+}
 
-    // Styles for buttons and behavior
-    &__control_prev, &__control_next { // Applied to a tag
-        position: absolute;
-        top: 40%;
-        z-index: 999;
-        display: block;
-        padding: 4% 3%;
-        width: auto;
-        height: auto;
-        background: #2a2a2a;
-        color: #fff;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 18px;
-        opacity: 0.8;
-        cursor: pointer;
-      }
+.agencies-testimonial {
+  position: relative;
+  &__dots-grid {
+    position: absolute;
+    &--green {
+      background-color: blue;
+      transform: rotate(90deg);
+      bottom:-20%;
+    }
+
+    &--pink {
+      background-color: pink;
+    }
+  }
+
+  &__box {
+    display: block;
+  }
+
+}
+
+
+// Slider component
+.primary-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto to-rem(199px) auto;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+
+  &__box { // ul tag
+    position: relative;
+    height: 100%;
+    max-height: to-rem(300px);
+    
+    &-message { // ul + li tags
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: to-rem(858px);
+      background: orange;
+      text-align: center;
+      line-height: 24px;
+      @include responsive-page(mdtop) { line-height: 39px; }
       
-      &__control_prev:hover, &__control_next:hover {
+    }
+  }
+
+  // Styles for buttons and behavior
+  &__control {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: to-rem(115px);
+    bottom: 0%;
+
+    z-index: 2;
+
+    &-prev, &-next { // Applied to a tag
+      background-color: orangered;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //padding: 0 3%;
+      width: 50%;
+      height: 40px;
+      color: $primary-color;
+      //font-size: 20px;
+      opacity: 0.6;
+      cursor: pointer;
+
+      border: 3px solid orange;
+      &:hover {
         opacity: 1;
+        font-size: 2rem;
+        font-weight: 900;
         transition: all 0.2s ease;
       }
-      
-      &__control_prev { border-radius: 0 2px 2px 0; }
-      
-      &__control_next {
-        right: 0;
-        border-radius: 2px 0 0 2px;
-      }
+    }
+    &-prev { border-radius: 0 2px 2px 0; }
+    &-next {
+      right: 0;
+      border-radius: 2px 0 0 2px;
+    }
   }
+}
 
 .slider_option {
 position: relative;
@@ -73,7 +122,7 @@ font-size: 18px;
     position: absolute;
     @include responsive-page(smd) { transform: scale(.7); }
 }
-// .agencies-testimonial-box {
-//     // background-image: url('./image/face-clients_images/15face-clients.png');
-//     // background-image: url('./image/face-clients_images/26face-clients.png');
-// }
+.agencies-testimonial-box {
+    background-image: no-repeat url('./image/face-clients_images/15face-clients.png');
+    background-image: url('./image/face-clients_images/26face-clients.png');
+}

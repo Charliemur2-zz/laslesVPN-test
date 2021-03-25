@@ -796,6 +796,7 @@ Useful to conevert px to rem
 .vpnbenefits {
   position: relative;
   width: 100%;
+  margin-bottom: 140px;
 }
 .vpnbenefits__color-patch {
   position: absolute;
@@ -809,19 +810,19 @@ Useful to conevert px to rem
   content: "";
   position: absolute;
   background: #ffffff;
-  border-radius: 40%;
+  border-radius: 45%;
   width: 100%;
-  height: 100px;
-  top: -40px;
+  height: 150px;
+  top: -75px;
 }
 .vpnbenefits__color-patch::after {
   content: "";
   position: absolute;
   background: #ffffff;
-  border-radius: 40%;
+  border-radius: 45%;
   width: 100%;
-  height: 100px;
-  bottom: -40px;
+  height: 150px;
+  bottom: -75px;
 }
 .vpnbenefits__circle {
   position: absolute;
@@ -858,16 +859,16 @@ Useful to conevert px to rem
   position: absolute;
   z-index: -1;
 }
-.vpnbenefits__dots-grid--deco5 {
-  top: 35%;
-}
 @media screen and (max-width: 767px) {
-  .vpnbenefits__dots-grid--deco5 {
+  .vpnbenefits__dots-grid {
     opacity: 0.7;
   }
 }
+.vpnbenefits__dots-grid--deco5 {
+  top: 35%;
+}
 .vpnbenefits__dots-grid--deco6 {
-  top: 50%;
+  top: 53%;
   transform: rotate(90deg);
   right: 136px;
 }
@@ -912,6 +913,8 @@ Useful to conevert px to rem
   }
 }
 .vpnbenefits__box .info-page__subtitle--benefits {
+  width: 100%;
+  max-width: 24.1666666667rem;
   color: #ffffff;
 }
 @media screen and (min-width: 1024px) {
@@ -938,18 +941,52 @@ Useful to conevert px to rem
     Agencies Testimonial Section
         * Includes the slider component
 */
+.info-page--agencies {
+  margin-bottom: 7.9444444444rem;
+}
+.info-page__subtitle--agencies {
+  align-self: center;
+  width: 100%;
+  max-width: 35.5555555556rem;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .info-page__subtitle--agencies {
+    font-size: 55px;
+    font-weight: 400;
+  }
+}
+
+.agencies-testimonial {
+  position: relative;
+}
+.agencies-testimonial__dots-grid {
+  position: absolute;
+}
+.agencies-testimonial__dots-grid--green {
+  background-color: blue;
+  transform: rotate(90deg);
+  bottom: -20%;
+}
+.agencies-testimonial__dots-grid--pink {
+  background-color: pink;
+}
+.agencies-testimonial__box {
+  display: block;
+}
+
 .primary-slider {
   position: relative;
   overflow: hidden;
   margin: 20px auto 0 auto;
-  border-radius: 4px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
 }
 .primary-slider__box {
   position: relative;
-  margin: 0;
-  padding: 0;
-  height: 200px;
-  list-style: none;
+  height: 100%;
+  max-height: 16.6666666667rem;
 }
 .primary-slider__box-message {
   position: relative;
@@ -958,35 +995,47 @@ Useful to conevert px to rem
   margin: 0;
   padding: 0;
   width: 500px;
-  height: 300px;
-  background: #ccc;
+  background: orange;
   text-align: center;
-  line-height: 300px;
+  line-height: 24px;
 }
-.primary-slider__control_prev, .primary-slider__control_next {
+@media screen and (min-width: 1024px) {
+  .primary-slider__box-message {
+    line-height: 39px;
+  }
+}
+.primary-slider__control {
   position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  width: 6.3888888889rem;
+  bottom: 0%;
+  z-index: 2;
 }
-.primary-slider__control_prev:hover, .primary-slider__control_next:hover {
+.primary-slider__control-prev, .primary-slider__control-next {
+  background-color: orangered;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 40px;
+  color: #272D4E;
+  opacity: 0.6;
+  cursor: pointer;
+  border: 3px solid orange;
+}
+.primary-slider__control-prev:hover, .primary-slider__control-next:hover {
   opacity: 1;
+  font-size: 2rem;
+  font-weight: 900;
   transition: all 0.2s ease;
 }
-.primary-slider__control_prev {
+.primary-slider__control-prev {
   border-radius: 0 2px 2px 0;
 }
-.primary-slider__control_next {
+.primary-slider__control-next {
   right: 0;
   border-radius: 2px 0 0 2px;
 }
@@ -1005,6 +1054,11 @@ Useful to conevert px to rem
   .dots-grid {
     transform: scale(0.7);
   }
+}
+
+.agencies-testimonial-box {
+  background-image: no-repeat url("./image/face-clients_images/15face-clients.png");
+  background-image: url("./image/face-clients_images/26face-clients.png");
 }
 
 .people__main {
