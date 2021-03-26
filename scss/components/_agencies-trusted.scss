@@ -1,0 +1,185 @@
+/*
+    Agencies Testimonial Section
+        * Includes the slider component
+*/
+
+.agencies-testimonial {
+  position: relative;
+  background: linear-gradient(180deg, rgba(236, 240, 253, 0) 0%, rgba(236, 240, 253, 0.53) 14.32%, #ECF0FD 45.83%, rgba(236, 240, 253, 0.43) 84.33%, rgba(236, 240, 253, 0) 100%);
+  
+  &__dots-grid {
+    position: absolute;
+    transform: scale(0);
+    opacity: .8;
+    @include responsive-page(md) { transform: scale(.6); }
+    @include responsive-page(mdtop) { transform: scale(1); }
+
+    &--green {
+      top:47%;
+      left:20%;
+      transform: rotate(90deg);
+    }
+
+    &--pink {
+      right:10%;
+      top:30%;
+    }
+  }
+  &__client {
+    position: absolute;
+    @include responsive-page(smd) { opacity:.6; z-index:-1; }
+    @include responsive-page(md) { opacity:.6; }
+    filter: drop-shadow(0px 14px 24px rgba(67, 48, 48, 0.14));
+    &--1 { top: 9%; left: 16%; }
+    &--2 { top: 68%; left: 2%; }
+    &--3 { top: 34%; left: 1%; }
+    &--4 { top: 37%; right: 0px; }
+    &--5 { top: 5%; right: 0%; }
+    &--6 { bottom: 5%; right: 10%;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+}
+// Title section
+.info-page {
+  &--agencies { 
+    margin-bottom: to-rem(50px);
+    @include responsive-page(mdtop) { margin-bottom: to-rem(143px); }
+  }
+  &__title {
+    &--agencies {
+      align-self: center;
+      width: 100%;
+      max-width: to-rem(640px);
+      text-align: center;
+      font-size: 38px;
+      font-weight: 400;
+      @include responsive-page(mdtop) { font-size: 55px; }
+    }
+  }
+}
+
+// Slider component
+.primary-slider {
+  position: relative;
+  margin: 0 auto to-rem(50px) auto;
+  width: 90%;
+  @include responsive-page(mdtop) { margin: 0 auto to-rem(199px) auto; }
+  
+  &__box { // ul tag
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+    &-message { // ul + li tags
+      position: relative;
+      display: flex;
+      min-width: to-rem(300px);
+      max-width: to-rem(858px);
+      margin: 0 auto;
+      padding: 12%;
+      text-align: center;
+      font-size: 20px;
+      line-height: 24px;
+      color:$tertiary-text;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+      
+      @include responsive-page(mdtop) {
+        font-size: 26px;
+        line-height: 39px;
+      }
+      
+      &::after { // first form
+        position: absolute;
+        content: "";
+        top:15%;
+        align-self: center;
+        left:5%;
+        z-index: -1;
+        background-color: #ffffff;
+        width: 90%;
+        height: 90%;
+        margin:0 auto;
+        border-radius: 20px;
+        box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+      }
+      &::before { // last form
+        position: absolute;
+        content: "";
+        bottom:-10%;
+        left:10%;
+        z-index: -1;
+        background-color: #ffffff;
+        width: 80%;
+        height: 80%;
+        margin:0 auto;
+        border-radius: 20px;
+      }
+      
+      .paragraph-slider {
+        position: relative;
+        z-index: 1;
+      }
+
+      .bg-quotes {
+        position: absolute;
+        top:5%;
+        left:40%;
+        width: fit-content;
+        align-content: center;
+        align-items: center;
+        mix-blend-mode: multiply;
+        @include responsive-page(smd) { display: none;}
+      }
+    }
+  
+    // Styles for buttons and behavior
+    .owl-nav {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 30px;
+      width: 60%;
+      height: 40px;
+      margin:-20px auto 0;
+      color: transparent;
+
+      .owl-prev:hover, .owl-next:hover {
+        font-size:48px;
+        font-weight: 800;
+        opacity: 1;
+        transition: 1s;
+      }
+      .owl-prev {
+        opacity: .4;
+        margin-right: 40px;
+        &::before {
+          position: absolute;
+          content:'\2190';
+          color:#000000;
+          @include responsive-page(smd) { padding: 0 5%; border-radius: 10px; background-color: $orange-light ; }
+        }
+      }
+      .owl-next {
+        opacity: .4;
+        margin-left: 10px;
+        &::before {
+          position: absolute;
+          content:'\2192';
+          color:#000000;
+          @include responsive-page(smd) { padding: 0 5%; border-radius: 10px; background-color: $orange-light; }
+        }
+      }
+    }  // End owl-nav class
+  }
+}
+

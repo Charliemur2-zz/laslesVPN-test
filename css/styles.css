@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* FONTS */
 /* COLORS */
 /* General Styles */
@@ -793,7 +794,12 @@ Useful to conevert px to rem
 /*
     Benefits section styles
 */
-.color-patch {
+.vpnbenefits {
+  position: relative;
+  width: 100%;
+  margin-bottom: 140px;
+}
+.vpnbenefits__color-patch {
   position: absolute;
   color: black;
   width: 100%;
@@ -801,28 +807,23 @@ Useful to conevert px to rem
   background-color: #FF890D;
   z-index: -1;
 }
-.color-patch::before {
+.vpnbenefits__color-patch::before {
   content: "";
   position: absolute;
   background: #ffffff;
-  border-radius: 40%;
+  border-radius: 45%;
   width: 100%;
-  height: 100px;
-  top: -40px;
+  height: 150px;
+  top: -75px;
 }
-.color-patch::after {
+.vpnbenefits__color-patch::after {
   content: "";
   position: absolute;
   background: #ffffff;
-  border-radius: 40%;
+  border-radius: 45%;
   width: 100%;
-  height: 100px;
-  bottom: -40px;
-}
-
-.vpnbenefits {
-  position: relative;
-  width: 100%;
+  height: 150px;
+  bottom: -75px;
 }
 .vpnbenefits__circle {
   position: absolute;
@@ -859,16 +860,16 @@ Useful to conevert px to rem
   position: absolute;
   z-index: -1;
 }
-.vpnbenefits__dots-grid--deco5 {
-  top: 35%;
-}
 @media screen and (max-width: 767px) {
-  .vpnbenefits__dots-grid--deco5 {
+  .vpnbenefits__dots-grid {
     opacity: 0.7;
   }
 }
+.vpnbenefits__dots-grid--deco5 {
+  top: 35%;
+}
 .vpnbenefits__dots-grid--deco6 {
-  top: 50%;
+  top: 53%;
   transform: rotate(90deg);
   right: 136px;
 }
@@ -877,28 +878,27 @@ Useful to conevert px to rem
     display: none;
   }
 }
-
-.benefits-box {
+.vpnbenefits__box {
   width: 90.31%;
   margin: 0 auto;
 }
-.benefits-box .info-page--box {
+.vpnbenefits__box .info-page--box {
   flex-flow: row wrap;
   margin-bottom: 22px;
 }
 @media screen and (min-width: 1024px) {
-  .benefits-box .info-page--box:nth-child(1), .benefits-box .info-page--box:nth-child(2) {
+  .vpnbenefits__box .info-page--box:nth-child(1), .vpnbenefits__box .info-page--box:nth-child(2) {
     justify-content: flex-start;
   }
 }
-.benefits-box .info-page--box:nth-child(2) {
+.vpnbenefits__box .info-page--box:nth-child(2) {
   flex-direction: row-reverse;
 }
-.benefits-box .info-page--benefits {
+.vpnbenefits__box .info-page--benefits {
   max-width: 490px;
   margin-bottom: 20px;
 }
-.benefits-box .info-page__images--benefits {
+.vpnbenefits__box .info-page__images--benefits {
   align-self: center;
   max-width: 23.8888888889rem;
   margin-bottom: 1.3888888889rem;
@@ -908,32 +908,268 @@ Useful to conevert px to rem
   box-shadow: -25px 20px 44px rgba(84, 48, 209, 0.4);
 }
 @media screen and (min-width: 1024px) {
-  .benefits-box .info-page__images--benefits {
+  .vpnbenefits__box .info-page__images--benefits {
     margin-right: 6%;
     margin-left: 3.75%;
   }
 }
-.benefits-box .info-page__subtitle--benefits {
+.vpnbenefits__box .info-page__subtitle--benefits {
+  width: 100%;
+  max-width: 24.1666666667rem;
   color: #ffffff;
 }
 @media screen and (min-width: 1024px) {
-  .benefits-box .info-page__subtitle--benefits {
+  .vpnbenefits__box .info-page__subtitle--benefits {
     font-size: 36px;
     line-height: 42px;
   }
 }
-.benefits-box .info-page__text--benefits {
+.vpnbenefits__box .info-page__text--benefits {
   line-height: 30px;
   color: #ffffff;
 }
-.benefits-box .info-page__button--benefits {
+.vpnbenefits__box .info-page__button--benefits {
   background-color: #70C217;
 }
-.benefits-box .info-page__button--benefits:hover {
+.vpnbenefits__box .info-page__button--benefits:hover {
   background-color: #96D94E;
 }
-.benefits-box .info-page__button--benefits:focus {
+.vpnbenefits__box .info-page__button--benefits:focus {
   background-color: #558E17;
+}
+
+/*
+    Agencies Testimonial Section
+        * Includes the slider component
+*/
+.agencies-testimonial {
+  position: relative;
+  background: linear-gradient(180deg, rgba(236, 240, 253, 0) 0%, rgba(236, 240, 253, 0.53) 14.32%, #ECF0FD 45.83%, rgba(236, 240, 253, 0.43) 84.33%, rgba(236, 240, 253, 0) 100%);
+}
+.agencies-testimonial__dots-grid {
+  position: absolute;
+  transform: scale(0);
+  opacity: 0.8;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .agencies-testimonial__dots-grid {
+    transform: scale(0.6);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .agencies-testimonial__dots-grid {
+    transform: scale(1);
+  }
+}
+.agencies-testimonial__dots-grid--green {
+  top: 47%;
+  left: 20%;
+  transform: rotate(90deg);
+}
+.agencies-testimonial__dots-grid--pink {
+  right: 10%;
+  top: 30%;
+}
+.agencies-testimonial__client {
+  position: absolute;
+  filter: drop-shadow(0px 14px 24px rgba(67, 48, 48, 0.14));
+}
+@media screen and (max-width: 767px) {
+  .agencies-testimonial__client {
+    opacity: 0.6;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .agencies-testimonial__client {
+    opacity: 0.6;
+  }
+}
+.agencies-testimonial__client--1 {
+  top: 9%;
+  left: 16%;
+}
+.agencies-testimonial__client--2 {
+  top: 68%;
+  left: 2%;
+}
+.agencies-testimonial__client--3 {
+  top: 34%;
+  left: 1%;
+}
+.agencies-testimonial__client--4 {
+  top: 37%;
+  right: 0px;
+}
+.agencies-testimonial__client--5 {
+  top: 5%;
+  right: 0%;
+}
+.agencies-testimonial__client--6 {
+  bottom: 5%;
+  right: 10%;
+}
+.agencies-testimonial__box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.info-page--agencies {
+  margin-bottom: 2.7777777778rem;
+}
+@media screen and (min-width: 1024px) {
+  .info-page--agencies {
+    margin-bottom: 7.9444444444rem;
+  }
+}
+.info-page__title--agencies {
+  align-self: center;
+  width: 100%;
+  max-width: 35.5555555556rem;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  .info-page__title--agencies {
+    font-size: 55px;
+  }
+}
+
+.primary-slider {
+  position: relative;
+  margin: 0 auto 2.7777777778rem auto;
+  width: 90%;
+}
+@media screen and (min-width: 1024px) {
+  .primary-slider {
+    margin: 0 auto 11.0555555556rem auto;
+  }
+}
+.primary-slider__box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.primary-slider__box-message {
+  position: relative;
+  display: flex;
+  min-width: 16.6666666667rem;
+  max-width: 47.6666666667rem;
+  margin: 0 auto;
+  padding: 12%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  color: #94A2B3;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+}
+@media screen and (min-width: 1024px) {
+  .primary-slider__box-message {
+    font-size: 26px;
+    line-height: 39px;
+  }
+}
+.primary-slider__box-message::after {
+  position: absolute;
+  content: "";
+  top: 15%;
+  align-self: center;
+  left: 5%;
+  z-index: -1;
+  background-color: #ffffff;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+}
+.primary-slider__box-message::before {
+  position: absolute;
+  content: "";
+  bottom: -10%;
+  left: 10%;
+  z-index: -1;
+  background-color: #ffffff;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.primary-slider__box-message .paragraph-slider {
+  position: relative;
+  z-index: 1;
+}
+.primary-slider__box-message .bg-quotes {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  width: fit-content;
+  align-content: center;
+  align-items: center;
+  mix-blend-mode: multiply;
+}
+@media screen and (max-width: 767px) {
+  .primary-slider__box-message .bg-quotes {
+    display: none;
+  }
+}
+.primary-slider .owl-nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 30px;
+  width: 60%;
+  height: 40px;
+  margin: -20px auto 0;
+  color: transparent;
+}
+.primary-slider .owl-nav .owl-prev:hover, .primary-slider .owl-nav .owl-next:hover {
+  font-size: 48px;
+  font-weight: 800;
+  opacity: 1;
+  transition: 1s;
+}
+.primary-slider .owl-nav .owl-prev {
+  opacity: 0.4;
+  margin-right: 40px;
+}
+.primary-slider .owl-nav .owl-prev::before {
+  position: absolute;
+  content: "←";
+  color: #000000;
+}
+@media screen and (max-width: 767px) {
+  .primary-slider .owl-nav .owl-prev::before {
+    padding: 0 5%;
+    border-radius: 10px;
+    background-color: #FFA342;
+  }
+}
+.primary-slider .owl-nav .owl-next {
+  opacity: 0.4;
+  margin-left: 10px;
+}
+.primary-slider .owl-nav .owl-next::before {
+  position: absolute;
+  content: "→";
+  color: #000000;
+}
+@media screen and (max-width: 767px) {
+  .primary-slider .owl-nav .owl-next::before {
+    padding: 0 5%;
+    border-radius: 10px;
+    background-color: #FFA342;
+  }
+}
+
+.agencies-testimonial-box {
+  background-image: no-repeat url("../../image/face-clients_images/15face-clients.png");
+  background-image: url("./image/face-clients_images/26face-clients.png");
 }
 
 .people__main {
