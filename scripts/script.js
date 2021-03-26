@@ -73,17 +73,19 @@ $(function () {
     }, 3000);
   });
   
-  // Carousel 
-  $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{ items:1 },
-        767:{ items:1 },
-        1024:{ items:1 }
-    }
-  })
+  // Carousel applied to Agencies testimonial section
+  if ($('.primary-slider__box')) {
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+          0:{ items:1 },
+          767:{ items:1 },
+          1024:{ items:1 }
+      }
+    })
+  } // Here, continue with the conditional to choose 
 
 });
 
