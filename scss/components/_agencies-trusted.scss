@@ -27,13 +27,15 @@
   }
   &__client {
     position: absolute;
-    @include responsive-page(smd) { opacity:.6; z-index:-1; }
-    @include responsive-page(md) { opacity:.6; }
+    opacity:.6;
+    object-fit: none;
+    @include responsive-page(smd) { z-index:-1; }
+    @include responsive-page(mdtop) { opacity:1; }
     filter: drop-shadow(0px 14px 24px rgba(67, 48, 48, 0.14));
     &--1 { top: 9%; left: 16%; }
     &--2 { top: 68%; left: 2%; }
     &--3 { top: 34%; left: 1%; }
-    &--4 { top: 37%; right: 0px; }
+    &--4 { top: 37%; right: 0px; object-position: 35px;}
     &--5 { top: 5%; right: 0%; }
     &--6 { bottom: 5%; right: 10%;
     }

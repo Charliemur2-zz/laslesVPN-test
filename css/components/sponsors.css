@@ -1,0 +1,17 @@
+/*
+    Sponsors section
+*/
+.sponsor {
+  width: 100%;
+  padding: 5% 0;
+}
+.sponsor__box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90.31%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=sponsors.css.map */
