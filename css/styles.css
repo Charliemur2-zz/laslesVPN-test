@@ -1,6 +1,95 @@
 @charset "UTF-8";
 /* FONTS */
 /* COLORS */
+/*
+  Fonts of the Project.
+  With the local() method we search the font in the local server,
+  else the fonts are loaded from this project.
+*/
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black Italic"), local("Roboto-BlackItalic"), url("fonts/Roboto-BlackItalic.woff2") format("woff2"), url("fonts/Roboto-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url("fonts/Roboto-BoldItalic.woff2") format("woff2"), url("fonts/Roboto-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("fonts/Roboto-Bold.woff2") format("woff2"), url("fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), local("Roboto-Black"), url("fonts/Roboto-Black.woff2") format("woff2"), url("fonts/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light Italic"), local("Roboto-LightItalic"), url("fonts/Roboto-LightItalic.woff2") format("woff2"), url("fonts/Roboto-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Thin"), local("Roboto-Thin"), url("fonts/Roboto-Thin.woff2") format("woff2"), url("fonts/Roboto-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"), url("fonts/Roboto-MediumItalic.woff2") format("woff2"), url("fonts/Roboto-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Thin Italic"), local("Roboto-ThinItalic"), url("fonts/Roboto-ThinItalic.woff2") format("woff2"), url("fonts/Roboto-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), local("Roboto-Light"), url("fonts/Roboto-Light.woff2") format("woff2"), url("fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("fonts/Roboto-Medium.woff2") format("woff2"), url("fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"), url("fonts/Roboto-Regular.woff2") format("woff2"), url("fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Italic"), local("Roboto-Italic"), url("fonts/Roboto-Italic.woff2") format("woff2"), url("fonts/Roboto-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
 /* General Styles */
 * {
   margin: 0;
@@ -949,7 +1038,7 @@ Useful to conevert px to rem
 .agencies-testimonial__dots-grid {
   position: absolute;
   transform: scale(0);
-  opacity: 0.8;
+  opacity: 0.4;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .agencies-testimonial__dots-grid {
@@ -972,17 +1061,18 @@ Useful to conevert px to rem
 }
 .agencies-testimonial__client {
   position: absolute;
+  opacity: 0.6;
+  object-fit: none;
   filter: drop-shadow(0px 14px 24px rgba(67, 48, 48, 0.14));
 }
 @media screen and (max-width: 767px) {
   .agencies-testimonial__client {
-    opacity: 0.6;
     z-index: -1;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 1024px) {
   .agencies-testimonial__client {
-    opacity: 0.6;
+    opacity: 1;
   }
 }
 .agencies-testimonial__client--1 {
@@ -1000,6 +1090,7 @@ Useful to conevert px to rem
 .agencies-testimonial__client--4 {
   top: 37%;
   right: 0px;
+  object-position: 35px;
 }
 .agencies-testimonial__client--5 {
   top: 5%;
@@ -1008,6 +1099,11 @@ Useful to conevert px to rem
 .agencies-testimonial__client--6 {
   bottom: 5%;
   right: 10%;
+}
+@media screen and (max-width: 767px) {
+  .agencies-testimonial__client--6 {
+    display: none;
+  }
 }
 .agencies-testimonial__box {
   display: flex;
@@ -1117,7 +1213,7 @@ Useful to conevert px to rem
     display: none;
   }
 }
-.primary-slider .owl-nav {
+.primary-slider__box .owl-nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -1128,48 +1224,71 @@ Useful to conevert px to rem
   margin: -20px auto 0;
   color: transparent;
 }
-.primary-slider .owl-nav .owl-prev:hover, .primary-slider .owl-nav .owl-next:hover {
+.primary-slider__box .owl-nav .owl-prev:hover, .primary-slider__box .owl-nav .owl-next:hover {
   font-size: 48px;
   font-weight: 800;
   opacity: 1;
   transition: 1s;
 }
-.primary-slider .owl-nav .owl-prev {
+.primary-slider__box .owl-nav .owl-prev {
   opacity: 0.4;
   margin-right: 40px;
 }
-.primary-slider .owl-nav .owl-prev::before {
+.primary-slider__box .owl-nav .owl-prev::before {
   position: absolute;
   content: "←";
   color: #000000;
 }
 @media screen and (max-width: 767px) {
-  .primary-slider .owl-nav .owl-prev::before {
+  .primary-slider__box .owl-nav .owl-prev::before {
     padding: 0 5%;
     border-radius: 10px;
     background-color: #FFA342;
   }
 }
-.primary-slider .owl-nav .owl-next {
+.primary-slider__box .owl-nav .owl-next {
   opacity: 0.4;
   margin-left: 10px;
 }
-.primary-slider .owl-nav .owl-next::before {
+.primary-slider__box .owl-nav .owl-next::before {
   position: absolute;
   content: "→";
   color: #000000;
 }
 @media screen and (max-width: 767px) {
-  .primary-slider .owl-nav .owl-next::before {
+  .primary-slider__box .owl-nav .owl-next::before {
     padding: 0 5%;
     border-radius: 10px;
     background-color: #FFA342;
   }
 }
 
-.agencies-testimonial-box {
-  background-image: no-repeat url("../../image/face-clients_images/15face-clients.png");
-  background-image: url("./image/face-clients_images/26face-clients.png");
+/*
+    Sponsors section
+*/
+.sponsor {
+  width: 100%;
+  padding: 5% 0;
+}
+.sponsor__box {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90.31%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .sponsor__box-logo {
+    margin-bottom: 40px;
+  }
+}
+.sponsor__box-logo:hover {
+  background-color: black;
+  filter: drop-shadow(8px 8px 5px rgba(4, 27, 153, 0.34));
+  transition: background-color 1s cubic-bezier(0.77, 0, 0.18, 1);
+  border-radius: 60px;
+  padding: 0.8%;
 }
 
 .people__main {
