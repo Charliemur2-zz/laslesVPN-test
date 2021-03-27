@@ -10,7 +10,7 @@
   &__dots-grid {
     position: absolute;
     transform: scale(0);
-    opacity: .8;
+    opacity: .4;
     @include responsive-page(md) { transform: scale(.6); }
     @include responsive-page(mdtop) { transform: scale(1); }
 
@@ -37,8 +37,7 @@
     &--3 { top: 34%; left: 1%; }
     &--4 { top: 37%; right: 0px; object-position: 35px;}
     &--5 { top: 5%; right: 0%; }
-    &--6 { bottom: 5%; right: 10%;
-    }
+    &--6 { bottom: 5%; right: 10%; @include responsive-page(smd) { display: none; } }
   }
 
   &__box {
