@@ -1,0 +1,27 @@
+/*
+    Sponsors section
+*/
+
+.sponsor {
+    width: 100%;
+    padding: 5% 0;
+    &__box {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 90.31%;
+        margin: 0 auto;
+        
+        &-logo {
+            @include responsive-page(smd) {margin-bottom: 40px; }
+            &:hover {
+                background-color: black;
+                filter: drop-shadow(8px 8px 5px rgba(4, 27, 153, 0.34));
+                transition: background-color 1s cubic-bezier(.77,0,.18,1);
+                border-radius: 60px;
+                padding: 0.8%;
+            }
+        }
+    }
+}
