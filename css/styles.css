@@ -1117,7 +1117,7 @@ Useful to conevert px to rem
     display: none;
   }
 }
-.primary-slider .owl-nav {
+.primary-slider__box .owl-nav {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -1128,48 +1128,43 @@ Useful to conevert px to rem
   margin: -20px auto 0;
   color: transparent;
 }
-.primary-slider .owl-nav .owl-prev:hover, .primary-slider .owl-nav .owl-next:hover {
+.primary-slider__box .owl-nav .owl-prev:hover, .primary-slider__box .owl-nav .owl-next:hover {
   font-size: 48px;
   font-weight: 800;
   opacity: 1;
   transition: 1s;
 }
-.primary-slider .owl-nav .owl-prev {
+.primary-slider__box .owl-nav .owl-prev {
   opacity: 0.4;
   margin-right: 40px;
 }
-.primary-slider .owl-nav .owl-prev::before {
+.primary-slider__box .owl-nav .owl-prev::before {
   position: absolute;
   content: "←";
   color: #000000;
 }
 @media screen and (max-width: 767px) {
-  .primary-slider .owl-nav .owl-prev::before {
+  .primary-slider__box .owl-nav .owl-prev::before {
     padding: 0 5%;
     border-radius: 10px;
     background-color: #FFA342;
   }
 }
-.primary-slider .owl-nav .owl-next {
+.primary-slider__box .owl-nav .owl-next {
   opacity: 0.4;
   margin-left: 10px;
 }
-.primary-slider .owl-nav .owl-next::before {
+.primary-slider__box .owl-nav .owl-next::before {
   position: absolute;
   content: "→";
   color: #000000;
 }
 @media screen and (max-width: 767px) {
-  .primary-slider .owl-nav .owl-next::before {
+  .primary-slider__box .owl-nav .owl-next::before {
     padding: 0 5%;
     border-radius: 10px;
     background-color: #FFA342;
   }
-}
-
-.agencies-testimonial-box {
-  background-image: no-repeat url("../../image/face-clients_images/15face-clients.png");
-  background-image: url("./image/face-clients_images/26face-clients.png");
 }
 
 .people__main {
