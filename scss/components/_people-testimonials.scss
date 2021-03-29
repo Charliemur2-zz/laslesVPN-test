@@ -1,0 +1,85 @@
+.people-testimonials {
+  .glider-contain {
+    padding: 0 70px 24px 70px;
+    .glider {
+      &__item {
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        margin: 0 20px;
+        padding: 30px 0 10px 0;
+        .person-info {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 20px;
+          &__img {
+            justify-self: end;
+          }
+          &__text {
+            grid-column: 2 / span 2;
+          }
+          &__name {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1rem;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: $logo-color;
+          }
+          &__location {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.77rem;
+            line-height: 14px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: $fourth-text;
+          }
+        }
+        .person__testimonial {
+          padding: 20px 42px 20px 36px;
+          &-text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.88rem;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            color: $fourth-text;
+          }
+        }
+      }
+      &__item.active {
+        border: 2px solid #F53838;
+      }
+      &-prev {
+        @include responsive-page(smd) {
+          left: 20%;
+          top: 82%;
+        }
+      }
+      &-next {
+        @include responsive-page(smd) {
+          right: 20%;
+          top: 82%;
+        }
+      }
+      &-dots {
+        @include responsive-page(smd) {
+          padding: 36% 0 0 19%;
+        }
+      }
+      &-dot {
+        @include responsive-page(smd) {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+.glider-arrow--white {
+  fill: white;
+}

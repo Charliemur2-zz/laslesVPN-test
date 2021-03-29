@@ -1291,6 +1291,89 @@ Useful to conevert px to rem
   padding: 0.8%;
 }
 
+.people-testimonials .glider-contain {
+  padding: 0 70px 24px 70px;
+}
+.people-testimonials .glider-contain .glider__item {
+  border: 2px solid #DDDDDD;
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 30px 0 10px 0;
+}
+.people-testimonials .glider-contain .glider__item .person-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.people-testimonials .glider-contain .glider__item .person-info__img {
+  justify-self: end;
+}
+.people-testimonials .glider-contain .glider__item .person-info__text {
+  grid-column: 2/span 2;
+}
+.people-testimonials .glider-contain .glider__item .person-info__name {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #0B132A;
+}
+.people-testimonials .glider-contain .glider__item .person-info__location {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.77rem;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #4F5665;
+}
+.people-testimonials .glider-contain .glider__item .person__testimonial {
+  padding: 20px 42px 20px 36px;
+}
+.people-testimonials .glider-contain .glider__item .person__testimonial-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.88rem;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #4F5665;
+}
+.people-testimonials .glider-contain .glider__item.active {
+  border: 2px solid #F53838;
+}
+@media screen and (max-width: 767px) {
+  .people-testimonials .glider-contain .glider-prev {
+    left: 20%;
+    top: 82%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .people-testimonials .glider-contain .glider-next {
+    right: 20%;
+    top: 82%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .people-testimonials .glider-contain .glider-dots {
+    padding: 36% 0 0 19%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .people-testimonials .glider-contain .glider-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.glider-arrow--white {
+  fill: white;
+}
+
 .people__main {
   width: 100%;
   background-image: url("../image/dots-green.svg");
