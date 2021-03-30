@@ -79,7 +79,7 @@
             @include responsive-page(mdtop) { margin: 140px 0  0 40px; right: 90px; }
         }
         &-googleAds {
-            left:230px;
+            left:220px;
             margin-bottom:0;
             @include responsive-page(mdtop) { bottom: -30px; left: 150px; }
         }

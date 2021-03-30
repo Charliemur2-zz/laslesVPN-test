@@ -806,7 +806,7 @@ Useful to conevert px to rem
   }
 }
 .info-page__images-googleAds {
-  left: 230px;
+  left: 220px;
   margin-bottom: 0;
 }
 @media screen and (min-width: 1024px) {
@@ -1055,6 +1055,11 @@ Useful to conevert px to rem
   left: 20%;
   transform: rotate(90deg);
 }
+@media screen and (max-width: 767px) {
+  .agencies-testimonial__dots-grid--green {
+    transform: scale(0);
+  }
+}
 .agencies-testimonial__dots-grid--pink {
   right: 10%;
   top: 30%;
@@ -1241,7 +1246,14 @@ Useful to conevert px to rem
 }
 @media screen and (max-width: 767px) {
   .primary-slider__box .owl-nav .owl-prev::before {
-    padding: 0 5%;
+    padding: 0 2%;
+    border-radius: 10px;
+    background-color: #FFA342;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .primary-slider__box .owl-nav .owl-prev::before {
+    padding: 0 2%;
     border-radius: 10px;
     background-color: #FFA342;
   }
@@ -1257,7 +1269,14 @@ Useful to conevert px to rem
 }
 @media screen and (max-width: 767px) {
   .primary-slider__box .owl-nav .owl-next::before {
-    padding: 0 5%;
+    padding: 0 2%;
+    border-radius: 10px;
+    background-color: #FFA342;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .primary-slider__box .owl-nav .owl-next::before {
+    padding: 0 2%;
     border-radius: 10px;
     background-color: #FFA342;
   }

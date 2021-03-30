@@ -18,6 +18,7 @@
       top:47%;
       left:20%;
       transform: rotate(90deg);
+      @include responsive-page(smd) { transform: scale(0); }
     }
 
     &--pink {
@@ -167,7 +168,8 @@
           position: absolute;
           content:'\2190';
           color:#000000;
-          @include responsive-page(smd) { padding: 0 5%; border-radius: 10px; background-color: $orange-light ; }
+          @include responsive-page(smd) { padding: 0 2%; border-radius: 10px; background-color: $orange-light ; }
+          @include responsive-page(md) { padding: 0 2%; border-radius: 10px; background-color: $orange-light ; }
         }
       }
       .owl-next {
@@ -177,7 +179,8 @@
           position: absolute;
           content:'\2192';
           color:#000000;
-          @include responsive-page(smd) { padding: 0 5%; border-radius: 10px; background-color: $orange-light; }
+          @include responsive-page(smd) { padding: 0 2%; border-radius: 10px; background-color: $orange-light; }
+          @include responsive-page(md) { padding: 0 2%; border-radius: 10px; background-color: $orange-light; }
         }
       }
     }  // End owl-nav class
